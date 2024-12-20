@@ -14,7 +14,7 @@ import time
 load_dotenv()
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = os.getenv("UPLOAD_PATH")
+app.config['UPLOAD_FOLDER'] = os.getenv("UPLOAD_PATH", "/var/www/visutext/VisuTextAI/static/uploads")
 
 # Ensure directories exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
